@@ -4,3 +4,14 @@ jdk: oraclejdk11
 
 before_install:
   - chmod +x gradlew
+
+addons:
+  sonarcloud:
+    organization: "radek-git"
+    token:
+      secure: "KILRI66Sr6XV2Ji53BXov/soKqjqJAefvml0qCaQTZKDoL8v/ayinEfdHf+hIglo6zcNlTQsfInwO/SLo3oDgQit+aHglgKShGnYvXD6TvFrMKgH711BtUncLrhQJGcJJiRK/woqh0Iqthae2KNItDHXOI4zoDFABGTI8QVzVcarMh54nc81L2btc8bJiY+2jpYVEwkxwJOfbauO1JLM/kgp+U/y9Yv
+                  lCHlsW0MLgUgrG23tUIFZvnSrselyRuiYQnNxiK6wR+LpHzO4IxZCAbXD40BDVKT0eqti+qkkKa8nTDTgQv7pDHzdOmH8ZoYo6dPTzYss3V7nasfxr3w79M2b5VkZI+RE6IZZwMC9RbZCfrxwqF3T3vUNtBMN/vqnuN+tcG95xAnynCtAiuqXVuhNOfkPMglyemsfTOXYSXJksSs35IpPi5/NS90FOqbsUfPL+e9bO
+                  7CvxVHv0v4ncl6xOc/In3usohxVkxLbc1e7hxg3wtWaf7rdf2l1cD2lFf7Rn9VPIM3Qh9vnrh2XLsOAEIR903UadjC8qV2KbTJBauc+dr1nKlFTONqkPWyMF8LXGLVqmJi4xPruQ+WqY2YDyveibQMfpi/UuthNALWoBKYemqriPBt/xvwCZZcyD2AMKkNbD3DanGepXzx5e2FRP0+WMa8Q4tlD3SBodD4="
+
+script:
+  - ./gradlew sonarqube
