@@ -16,5 +16,5 @@ public class ExampleTest {
         Assert.assertThat(10-2, CoreMatchers.is(8));
     }
 
-    
+
 }
